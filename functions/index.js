@@ -15,19 +15,19 @@ let transporter = nodemailer.createTransport({
     }
 });
 
-let transporter = nodemailer.createTransport({
-    host: "mail.smtp.com",
-    port: 465,
-    secure: true, // use SSL
-    auth: {
-        user: "mail@smtp.com",
-        pass: "password"
-    },
-    tls: {
-        // do not fail on invalid certs
-        rejectUnauthorized: false
-      }
-  });
+// let transporter = nodemailer.createTransport({
+//     host: "mail.smtp.com",
+//     port: 465,
+//     secure: true, // use SSL
+//     auth: {
+//         user: "mail@smtp.com",
+//         pass: "password"
+//     },
+//     tls: {
+//         // do not fail on invalid certs
+//         rejectUnauthorized: false
+//       }
+//   });
 
 
 exports.sendMail = functions.https.onRequest((req, res) => {
